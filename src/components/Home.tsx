@@ -1,5 +1,0 @@
-type PropsHome = {
-    title: string;
-
-};
-

@@ -5,6 +5,7 @@ import {
   BrowserWindow,
   MenuItemConstructorOptions,
 } from 'electron';
+import { ReactNode } from 'react';
 
 interface DarwinMenuItemConstructorOptions extends MenuItemConstructorOptions {
   selector?: string;
@@ -13,6 +14,8 @@ interface DarwinMenuItemConstructorOptions extends MenuItemConstructorOptions {
 
 export default class MenuBuilder {
   mainWindow: BrowserWindow;
+    static menuEl: ReactNode;
+    static showMenu: ReactNode;
 
   constructor(mainWindow: BrowserWindow) {
     this.mainWindow = mainWindow;
