@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from "react";
 import Skeleton from "renderer/components/Skeleton";
+import img from "../../../assets/images/elonmusk.jpg";
 
 
 export default function ComponentProfile() {
@@ -35,7 +36,8 @@ export default function ComponentProfile() {
                         <ul>
 
                             <li>
-                                <div id="profilePh"></div>
+                                <img id="profilePh"
+                                   src={img} alt="perfil" style={{ maxWidth:"100%", maxHeight:"100%", }}/>
                             </li>
 
                             <li>
@@ -103,6 +105,10 @@ export default function ComponentProfile() {
                                 </div>
                             </li>
                         </ul>
+
+                        <button id="buttonH" onClick={() => (save())}>
+                            Guardar
+                        </button>
                     </div>
                     
 
@@ -115,53 +121,54 @@ export default function ComponentProfile() {
                         <ul>
 
                             <li>
-                                <div id="profilePh"></div>
+                                <img id="profilePh"
+                                   src={img} alt="perfil" style={{ maxWidth:"100%", maxHeight:"100%", }}/>
                             </li>
 
                             <li>
-                                <div id="mediumEl">
+                                <div id="mediumEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}>
                                     <p>{name}</p>
                                 </div>
                             </li>
 
                             <li>
-                                <div id="mediumEl">
+                                <div id="mediumEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}>
                                     <p>{lastName}</p>
                                 </div>
                             </li>
 
                             <li>
-                                <div id="shortEl">
+                                <div id="shortEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}>
                                 <p>{age}</p>
                                 </div>
                             </li>
 
                             <li>
-                                <div id="longEl">
+                                <div id="longEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}> 
                                     <p>{birthDate}</p>
                                 </div>
                             </li>
                             <li>
-                                <div id="shortEl">
+                                <div id="shortEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}>
                                         <p>{dni}</p>
                                     </div>
                                 </li>
 
                             <li>
-                                <div id="longEl">
+                                <div id="longEl" style={{ backgroundColor: "rgb(214, 239, 255)", }}>
                                     <p>{about}</p>
                                 </div>
                             </li>
                         </ul>
+                        <button id="buttonH" onClick={() => (setEditing(true))}>
+                            Editar
+                        </button>
                     </div>
                 </div>
 
             ))
 
             }
-            <button id="buttonH" onClick={() => (editing ? save() : setEditing(true))}>
-                {editing ? "Guardar" : "Editar"}
-            </button>
             
         </div>
         // <div className="skeleton">

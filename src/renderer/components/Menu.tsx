@@ -15,12 +15,9 @@ export default function Menu({name, menuEl, show, showMe}:PropsMenu) {
             
             <div id="menuName">{name}</div>
 
-            <div id="menu" 
-                style = {{ 
+            <div id="menuElement"  style = {{ 
                     display: show ? "block" : "none",
-                }} />
-
-            <div id="menuElement">
+                }} >
                 <ul>
                     {menuEl.map((menuEl) => (
                         <li>{menuEl}</li>

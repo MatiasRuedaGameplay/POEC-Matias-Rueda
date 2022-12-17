@@ -1,5 +1,5 @@
-import ComponentButton from 'components/Button';
 import { Link } from 'react-router-dom';
+import ComponentButton from 'renderer/components/Button';
 
 type PropsHome = {
     title: string;

@@ -16,10 +16,10 @@ export default function Menus() {
     return (
 
             <div id="menuBar">
-                {/* <div id="menuClose"
+                <div id="menuClose"
                     onClick={() => setShow(undefined)}
                     style={{ display: show !== undefined ? "block" : "none" }}
-                /> */}
+                />
                 
                 {menus.map((menu, i) => (
 
@@ -32,10 +32,12 @@ export default function Menus() {
                 
                 ))}
 
+                <div id="title">Titulo</div>
+
                 <div id="windowButtons">
-                    <div><p>▬</p></div>
-                    <div><p>█</p></div>
-                    <div><p id="close">X</p></div>
+                    <div onClick={() => window.electron.minimize()}>▬</div>
+                    <div>█</div>
+                    <div onClick={() => window.electron.close() }id="close">X</div>
                     
                 </div>
             </div>
